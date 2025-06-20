@@ -3,78 +3,78 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system - Medical Professional Theme */
+/* Definition of the design system - Modern Teal & Navy Theme */
 
 @layer base {
   :root {
     --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --foreground: 213 27% 84%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 213 27% 84%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 213 27% 84%;
 
-    --primary: 220 100% 50%;
+    --primary: 184 91% 17%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 220 14.3% 95.9%;
-    --secondary-foreground: 220 8.9% 46.1%;
+    --secondary: 184 44% 94%;
+    --secondary-foreground: 184 91% 17%;
 
-    --muted: 220 14.3% 95.9%;
-    --muted-foreground: 220 8.9% 46.1%;
+    --muted: 184 44% 94%;
+    --muted-foreground: 184 25% 35%;
 
-    --accent: 220 14.3% 95.9%;
-    --accent-foreground: 220 8.9% 46.1%;
+    --accent: 172 100% 24%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 220 13% 91%;
-    --input: 220 13% 91%;
-    --ring: 220 100% 50%;
+    --border: 184 20% 85%;
+    --input: 184 20% 85%;
+    --ring: 184 91% 17%;
 
     --radius: 0.75rem;
 
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 240 5.9% 10%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 4.8% 95.9%;
-    --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 220 100% 50%;
+    --sidebar-background: 184 44% 96%;
+    --sidebar-foreground: 184 91% 17%;
+    --sidebar-primary: 184 91% 17%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 184 44% 90%;
+    --sidebar-accent-foreground: 184 91% 17%;
+    --sidebar-border: 184 20% 85%;
+    --sidebar-ring: 184 91% 17%;
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-    --primary: 220 100% 60%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --background: 213 27% 9%;
+    --foreground: 0 0% 95%;
+    --card: 213 27% 12%;
+    --card-foreground: 0 0% 95%;
+    --popover: 213 27% 12%;
+    --popover-foreground: 0 0% 95%;
+    --primary: 172 100% 41%;
+    --primary-foreground: 213 27% 9%;
+    --secondary: 213 27% 16%;
+    --secondary-foreground: 0 0% 95%;
+    --muted: 213 27% 16%;
+    --muted-foreground: 213 13% 65%;
+    --accent: 184 91% 35%;
+    --accent-foreground: 0 0% 100%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 220 100% 60%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 220 100% 60%;
+    --border: 213 27% 20%;
+    --input: 213 27% 20%;
+    --ring: 172 100% 41%;
+    --sidebar-background: 213 27% 12%;
+    --sidebar-foreground: 0 0% 95%;
+    --sidebar-primary: 172 100% 41%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 220 100% 60%;
+    --sidebar-accent: 213 27% 16%;
+    --sidebar-accent-foreground: 0 0% 95%;
+    --sidebar-border: 213 27% 20%;
+    --sidebar-ring: 172 100% 41%;
   }
 }
 
@@ -89,7 +89,7 @@
   }
 }
 
-/* Medical Professional Design Animations */
+/* Modern Teal & Navy Design Animations */
 @layer utilities {
   .animate-fade-in {
     animation: fadeIn 0.5s ease-out;
@@ -109,19 +109,19 @@
   
   .hover-lift:hover {
     transform: translateY(-4px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 30px rgba(20, 184, 166, 0.15);
   }
   
   .professional-card {
-    @apply bg-white rounded-xl shadow-sm border border-gray-100 hover:shadow-lg transition-all duration-300;
+    @apply bg-white rounded-xl shadow-sm border border-teal-50 hover:shadow-lg hover:border-teal-100 transition-all duration-300;
   }
   
   .medical-gradient {
-    background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+    background: linear-gradient(135deg, #0d9488 0%, #0f766e 100%);
   }
   
   .text-gradient {
-    background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+    background: linear-gradient(135deg, #0d9488 0%, #0f766e 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -177,26 +177,26 @@ html {
   }
 }
 
-/* Professional medical color palette */
+/* Modern Teal & Navy color palette */
 .medical-blue {
-  background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+  background: linear-gradient(135deg, #0d9488 0%, #0f766e 100%);
 }
 
 .medical-light {
-  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  background: linear-gradient(135deg, #f0fdfa 0%, #e6fffa 100%);
 }
 
 .medical-accent {
-  background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%);
+  background: linear-gradient(135deg, #14b8a6 0%, #0d9488 100%);
 }
 
 /* Professional button styles */
 .btn-medical {
-  @apply bg-blue-600 hover:bg-blue-700 text-white font-medium px-6 py-3 rounded-lg transition-all duration-200 shadow-sm hover:shadow-md;
+  @apply bg-teal-600 hover:bg-teal-700 text-white font-medium px-6 py-3 rounded-lg transition-all duration-200 shadow-sm hover:shadow-md;
 }
 
 .btn-medical-outline {
-  @apply border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white font-medium px-6 py-3 rounded-lg transition-all duration-200;
+  @apply border-2 border-teal-600 text-teal-600 hover:bg-teal-600 hover:text-white font-medium px-6 py-3 rounded-lg transition-all duration-200;
 }
 
 /* Professional section spacing */
@@ -206,13 +206,13 @@ html {
 
 /* Clean typography */
 .heading-primary {
-  @apply text-4xl lg:text-5xl font-bold text-gray-900 leading-tight;
+  @apply text-4xl lg:text-5xl font-bold text-slate-800 leading-tight;
 }
 
 .heading-secondary {
-  @apply text-3xl lg:text-4xl font-bold text-gray-900 mb-4;
+  @apply text-3xl lg:text-4xl font-bold text-slate-800 mb-4;
 }
 
 .text-body {
-  @apply text-lg text-gray-600 leading-relaxed;
+  @apply text-lg text-slate-600 leading-relaxed;
 }
