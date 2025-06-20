@@ -127,7 +127,7 @@ const Index = () => {
         </div>
       </nav>
 
-      {/* Hero Section - Enhanced */}
+      {/* Hero Section */}
       <section id="home" className="section-padding bg-gradient-to-br from-white to-blue-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
@@ -211,7 +211,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* About Section - Enhanced Alignment */}
+      {/* About Section */}
       <section id="about" className="section-padding bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 lg:mb-16">
@@ -370,7 +370,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Services Section - Mobile Enhanced */}
+      {/* Services Section */}
       <section id="services" className="section-padding bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 lg:mb-16">
@@ -408,7 +408,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Video Reels Section - Mobile Enhanced */}
+      {/* Video Reels Section */}
       <section className="py-8 lg:py-12 bg-gray-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-6 lg:mb-8">
@@ -486,7 +486,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Testimonials Section - Mobile Enhanced */}
+      {/* Testimonials Section */}
       <section id="testimonials" className="section-padding bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 lg:mb-16">
@@ -531,7 +531,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Contact Section - Mobile Enhanced */}
+      {/* Contact Section */}
       <section id="contact" className="section-padding bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 lg:mb-16">
@@ -639,47 +639,6 @@ const Index = () => {
           </div>
         </div>
       </section>
-
-      {/* Footer - Enhanced Colors and Mobile */}
-      <footer className="bg-gray-900 text-white py-8 lg:py-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
-            <div>
-              <div className="flex items-center space-x-3 mb-4">
-                <div className="w-12 h-12 medical-gradient rounded-full flex items-center justify-center">
-                  <Stethoscope className="h-6 w-6 text-white" />
-                </div>
-                <div>
-                  <h3 className="text-lg lg:text-xl font-bold text-white">Dr. Prathusha Nerella</h3>
-                  <p className="text-sm text-gray-200">Healthcare Excellence</p>
-                </div>
-              </div>
-              <p className="text-gray-200 mb-4 leading-relaxed text-sm lg:text-base">
-                Providing comprehensive healthcare with a holistic approach to wellness and positive living in Hyderabad.
-              </p>
-            </div>
-
-            <div>
-              <h4 className="text-lg font-semibold mb-4 text-white">Contact Information</h4>
-              <div className="space-y-2 text-sm text-gray-200">
-                <p className="flex items-center">
-                  <MapPin className="h-4 w-4 mr-2" />
-                  Ramakrishna Math, Hyderabad
-                </p>
-                <p className="flex items-center">
-                  <Phone className="h-4 w-4 mr-2" />
-                  +91 98765 43210
-                </p>
-                <p>✉️ consultation@drprathushanerella.com</p>
-              </div>
-            </div>
-          </div>
-
-          <div className="border-t border-gray-700 mt-6 lg:mt-8 pt-6 lg:pt-8 text-center text-gray-300">
-            <p className="text-xs lg:text-sm">&copy; 2024 Dr. Prathusha Nerella. All rights reserved. | Designed for comprehensive healthcare excellence.</p>
-          </div>
-        </div>
-      </footer>
     </div>
   );
 };
