@@ -4,9 +4,11 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+import { useNavigate } from 'react-router-dom';
 
 const Index = () => {
   const [activeTab, setActiveTab] = useState('home');
+  const navigate = useNavigate();
 
   const services = [
     {
@@ -106,8 +108,7 @@ const Index = () => {
     { id: 'about', label: 'About Us' },
     { id: 'services', label: 'Services' },
     { id: 'testimonials', label: 'Testimonials' },
-    { id: 'contact', label: 'Contact Us' },
-    { id: 'registration', label: 'Patient Registration' }
+    { id: 'contact', label: 'Contact Us' }
   ];
 
   const scrollToSection = (sectionId: string) => {
@@ -146,6 +147,12 @@ const Index = () => {
                   {item.label}
                 </button>
               ))}
+              <button
+                onClick={() => navigate('/patient-registration')}
+                className="text-sm font-medium text-gray-700 hover:text-blue-600 transition-colors duration-200 py-2"
+              >
+                Patient Registration
+              </button>
             </div>
 
             <Button 
@@ -372,57 +379,57 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Video Reels Section */}
-      <section className="section-padding bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="heading-secondary">Health Education Videos</h2>
-            <p className="text-xl text-gray-600">Watch our latest health tips and medical insights</p>
+      {/* Video Reels Section - Made Smaller */}
+      <section className="py-12 bg-gray-50">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-8">
+            <h2 className="text-2xl font-bold text-gray-900 mb-2">Health Education Videos</h2>
+            <p className="text-lg text-gray-600">Watch our latest health tips and medical insights</p>
           </div>
 
-          <Carousel className="w-full">
+          <Carousel className="w-full" opts={{ align: "start", loop: true }}>
             <CarouselContent className="-ml-2 md:-ml-4">
               {[
                 {
                   id: 1,
                   title: "Diabetes Management Tips",
-                  thumbnail: "https://images.unsplash.com/photo-1559757175-0eb30cd8c063?w=400&h=600&fit=crop",
+                  thumbnail: "https://images.unsplash.com/photo-1559757175-0eb30cd8c063?w=300&h=400&fit=crop",
                   url: "https://www.instagram.com/reel/DKHnfO5SXC5/"
                 },
                 {
                   id: 2,
                   title: "Healthy Lifestyle Habits",
-                  thumbnail: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=600&fit=crop",
+                  thumbnail: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=300&h=400&fit=crop",
                   url: "https://www.instagram.com/reel/DKw1A5sS0xc/"
                 },
                 {
                   id: 3,
                   title: "Positive Psychology Tips",
-                  thumbnail: "https://images.unsplash.com/photo-1544027993-37dbfe43562a?w=400&h=600&fit=crop",
+                  thumbnail: "https://images.unsplash.com/photo-1544027993-37dbfe43562a?w=300&h=400&fit=crop",
                   url: "https://www.instagram.com/reel/DKrtOQnSDQk/"
                 },
                 {
                   id: 4,
                   title: "Holistic Health Approach",
-                  thumbnail: "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=400&h=600&fit=crop",
+                  thumbnail: "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=300&h=400&fit=crop",
                   url: "https://www.instagram.com/reel/DKj_laPywpc/"
                 },
                 {
                   id: 5,
                   title: "Mind-Body Wellness",
-                  thumbnail: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=600&fit=crop",
+                  thumbnail: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=300&h=400&fit=crop",
                   url: "https://www.instagram.com/reel/DKZnQRyylmh/"
                 },
                 {
                   id: 6,
                   title: "Stress Management",
-                  thumbnail: "https://images.unsplash.com/photo-1544027993-37dbfe43562a?w=400&h=600&fit=crop",
+                  thumbnail: "https://images.unsplash.com/photo-1544027993-37dbfe43562a?w=300&h=400&fit=crop",
                   url: "https://www.instagram.com/reel/DKMyPI0SmJz/"
                 }
               ].map((video) => (
-                <CarouselItem key={video.id} className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
+                <CarouselItem key={video.id} className="pl-2 md:pl-4 md:basis-1/3 lg:basis-1/4">
                   <Card className="professional-card overflow-hidden hover-lift">
-                    <div className="relative aspect-[9/16] bg-gray-100">
+                    <div className="relative aspect-[3/4] bg-gray-100">
                       <img
                         src={video.thumbnail}
                         alt={video.title}
@@ -431,14 +438,14 @@ const Index = () => {
                       <div className="absolute inset-0 bg-black/20 flex items-center justify-center group-hover:bg-black/30 transition-colors">
                         <button
                           onClick={() => window.open(video.url, '_blank')}
-                          className="w-16 h-16 bg-white/90 rounded-full flex items-center justify-center hover:bg-white hover:scale-110 transition-all"
+                          className="w-12 h-12 bg-white/90 rounded-full flex items-center justify-center hover:bg-white hover:scale-110 transition-all"
                         >
-                          <Play className="h-8 w-8 text-blue-600 ml-1" />
+                          <Play className="h-6 w-6 text-blue-600 ml-1" />
                         </button>
                       </div>
                     </div>
-                    <CardContent className="p-4">
-                      <h4 className="font-semibold text-gray-900">{video.title}</h4>
+                    <CardContent className="p-3">
+                      <h4 className="font-semibold text-gray-900 text-sm">{video.title}</h4>
                     </CardContent>
                   </Card>
                 </CarouselItem>
@@ -734,35 +741,53 @@ const Index = () => {
                     {item.label}
                   </button>
                 ))}
+                <button 
+                  onClick={() => navigate('/patient-registration')}
+                  className="block text-gray-400 hover:text-white transition-colors"
+                >
+                  Patient Registration
+                </button>
               </div>
             </div>
 
             <div>
-              <h4 className="text-lg font-semibold mb-4">Connect With Us</h4>
-              <div className="flex space-x-4 mb-6">
+              <h4 className="text-lg font-semibold mb-4">Follow Dr. Prathusha</h4>
+              <div className="grid grid-cols-2 gap-4 mb-6">
                 <a 
                   href="https://www.instagram.com/drprathushanerella" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="w-10 h-10 bg-gradient-to-r from-pink-500 to-purple-600 rounded-full flex items-center justify-center hover:scale-110 transition-transform"
+                  className="flex items-center space-x-3 p-3 bg-gradient-to-r from-pink-500 to-purple-600 rounded-lg hover:scale-105 transition-transform"
                 >
                   <Instagram className="h-5 w-5" />
+                  <span className="text-sm font-medium">Instagram</span>
                 </a>
                 <a 
                   href="https://www.youtube.com/@pravehaintegrative" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="w-10 h-10 bg-red-600 rounded-full flex items-center justify-center hover:scale-110 transition-transform"
+                  className="flex items-center space-x-3 p-3 bg-red-600 rounded-lg hover:scale-105 transition-transform"
                 >
                   <Youtube className="h-5 w-5" />
+                  <span className="text-sm font-medium">YouTube</span>
                 </a>
                 <a 
                   href="https://www.facebook.com/drprathushanerella/" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center hover:scale-110 transition-transform"
+                  className="flex items-center space-x-3 p-3 bg-blue-600 rounded-lg hover:scale-105 transition-transform"
                 >
                   <Facebook className="h-5 w-5" />
+                  <span className="text-sm font-medium">Facebook</span>
+                </a>
+                <a 
+                  href="https://www.threads.com/@drprathushanerella" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="flex items-center space-x-3 p-3 bg-gray-700 rounded-lg hover:scale-105 transition-transform"
+                >
+                  <div className="h-5 w-5 font-bold text-white">@</div>
+                  <span className="text-sm font-medium">Threads</span>
                 </a>
               </div>
               <div className="space-y-2 text-sm text-gray-400">
