@@ -221,8 +221,13 @@ const Index = () => {
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-start">
-            <div className="space-y-6 lg:space-y-8">
+          {/* Main Content Grid */}
+          <div className="grid lg:grid-cols-3 gap-8 lg:gap-12">
+            
+            {/* Left Column - Professional Information */}
+            <div className="lg:col-span-2 space-y-6 lg:space-y-8">
+              
+              {/* Professional Excellence Card */}
               <div className="professional-card p-6 lg:p-8 space-y-4 lg:space-y-6">
                 <div className="flex items-center space-x-3 mb-4">
                   <div className="w-12 h-12 medical-gradient rounded-lg flex items-center justify-center">
@@ -237,50 +242,57 @@ const Index = () => {
                 </p>
               </div>
 
-              <div className="professional-card p-6 lg:p-8 space-y-4">
-                <div className="flex items-center space-x-3 mb-4">
-                  <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center">
-                    <MapPin className="h-6 w-6 text-green-600" />
+              {/* Experience & Education Grid */}
+              <div className="grid md:grid-cols-2 gap-6">
+                
+                {/* Current & Previous Experience */}
+                <div className="professional-card p-6 lg:p-8 space-y-4">
+                  <div className="flex items-center space-x-3 mb-4">
+                    <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center">
+                      <MapPin className="h-6 w-6 text-green-600" />
+                    </div>
+                    <h4 className="text-lg lg:text-xl font-semibold text-gray-900">Experience</h4>
                   </div>
-                  <h4 className="text-lg lg:text-xl font-semibold text-gray-900">Current & Previous Experience</h4>
+                  <div className="space-y-3">
+                    <div className="flex items-center space-x-3 p-3 bg-blue-50 rounded-lg">
+                      <Clock className="h-5 w-5 text-blue-600" />
+                      <span className="text-gray-700 font-medium text-sm lg:text-base">Currently at Ramakrishna Math Hyderabad</span>
+                    </div>
+                    <div className="flex items-center space-x-3 p-3 bg-green-50 rounded-lg">
+                      <Clock className="h-5 w-5 text-green-600" />
+                      <span className="text-gray-700 font-medium text-sm lg:text-base">Former at MediCiti Institute of Medical Sciences</span>
+                    </div>
+                    <div className="flex items-center space-x-3 p-3 bg-purple-50 rounded-lg">
+                      <Clock className="h-5 w-5 text-purple-600" />
+                      <span className="text-gray-700 font-medium text-sm lg:text-base">Former at Apollo Clinic</span>
+                    </div>
+                  </div>
                 </div>
-                <div className="space-y-3">
-                  <div className="flex items-center space-x-3 p-3 bg-blue-50 rounded-lg">
-                    <Clock className="h-5 w-5 text-blue-600" />
-                    <span className="text-gray-700 font-medium text-sm lg:text-base">Currently at Ramakrishna Math Hyderabad</span>
-                  </div>
-                  <div className="flex items-center space-x-3 p-3 bg-green-50 rounded-lg">
-                    <Clock className="h-5 w-5 text-green-600" />
-                    <span className="text-gray-700 font-medium text-sm lg:text-base">Former at MediCiti Institute of Medical Sciences</span>
-                  </div>
-                  <div className="flex items-center space-x-3 p-3 bg-purple-50 rounded-lg">
-                    <Clock className="h-5 w-5 text-purple-600" />
-                    <span className="text-gray-700 font-medium text-sm lg:text-base">Former at Apollo Clinic</span>
-                  </div>
-                </div>
-              </div>
 
-              <div className="professional-card p-6 lg:p-8 space-y-4">
-                <div className="flex items-center space-x-3 mb-4">
-                  <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center">
-                    <Award className="h-6 w-6 text-orange-600" />
+                {/* Education & Certifications */}
+                <div className="professional-card p-6 lg:p-8 space-y-4">
+                  <div className="flex items-center space-x-3 mb-4">
+                    <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center">
+                      <Award className="h-6 w-6 text-orange-600" />
+                    </div>
+                    <h4 className="text-lg lg:text-xl font-semibold text-gray-900">Education</h4>
                   </div>
-                  <h4 className="text-lg lg:text-xl font-semibold text-gray-900">Education & Certifications</h4>
+                  <div className="space-y-3">
+                    <div className="flex items-start space-x-3">
+                      <div className="w-2 h-2 bg-blue-600 rounded-full mt-2"></div>
+                      <p className="text-gray-700 font-medium text-sm lg:text-base">MBBS, MD - General Physician</p>
+                    </div>
+                    <div className="flex items-start space-x-3">
+                      <div className="w-2 h-2 bg-green-600 rounded-full mt-2"></div>
+                      <p className="text-gray-700 font-medium text-sm lg:text-base">Studied at Narayana Medical College</p>
+                    </div>
+                    <div className="flex items-start space-x-3">
+                      <div className="w-2 h-2 bg-purple-600 rounded-full mt-2"></div>
+                      <p className="text-gray-700 font-medium text-sm lg:text-base">Certified by The Society of Neuro Linguistic Programming</p>
+                    </div>
+                  </div>
                 </div>
-                <div className="space-y-3">
-                  <div className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-blue-600 rounded-full mt-2"></div>
-                    <p className="text-gray-700 font-medium text-sm lg:text-base">MBBS, MD - General Physician</p>
-                  </div>
-                  <div className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-green-600 rounded-full mt-2"></div>
-                    <p className="text-gray-700 font-medium text-sm lg:text-base">Studied at Narayana Medical College</p>
-                  </div>
-                  <div className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-purple-600 rounded-full mt-2"></div>
-                    <p className="text-gray-700 font-medium text-sm lg:text-base">Certified by The Society of Neuro Linguistic Programming</p>
-                  </div>
-                </div>
+
               </div>
 
               {/* Social Media Section */}
@@ -330,29 +342,35 @@ const Index = () => {
                   </a>
                 </div>
               </div>
+
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 lg:gap-6">
-              {[
-                { icon: Heart, title: "Diabetes Care", desc: "Specialized diabetes management and lifestyle modification", color: "bg-red-50 text-red-600" },
-                { icon: Users, title: "Lifestyle Expert", desc: "Comprehensive lifestyle and wellness counseling", color: "bg-blue-50 text-blue-600" },
-                { icon: Award, title: "Positive Psychology", desc: "Mental wellness and positive mindset development", color: "bg-green-50 text-green-600" },
-                { icon: Stethoscope, title: "Holistic Health", desc: "Complete mind-body wellness approach", color: "bg-purple-50 text-purple-600" }
-              ].map((item, index) => (
-                <Card key={index} className="professional-card p-4 lg:p-6 text-center hover-lift">
-                  <div className={`w-14 h-14 lg:w-16 lg:h-16 ${item.color.split(' ')[0]} rounded-2xl flex items-center justify-center mx-auto mb-4`}>
-                    <item.icon className={`h-7 w-7 lg:h-8 lg:w-8 ${item.color.split(' ')[1]}`} />
-                  </div>
-                  <h4 className="font-semibold text-gray-900 mb-2 text-sm lg:text-base">{item.title}</h4>
-                  <p className="text-xs lg:text-sm text-gray-600 leading-relaxed">{item.desc}</p>
-                </Card>
-              ))}
+            {/* Right Column - Specializations */}
+            <div className="space-y-6">
+              <h3 className="text-xl lg:text-2xl font-semibold text-gray-900 text-center lg:text-left">Specializations</h3>
+              <div className="grid grid-cols-1 gap-4 lg:gap-6">
+                {[
+                  { icon: Heart, title: "Diabetes Care", desc: "Specialized diabetes management and lifestyle modification", color: "bg-red-50 text-red-600" },
+                  { icon: Users, title: "Lifestyle Expert", desc: "Comprehensive lifestyle and wellness counseling", color: "bg-blue-50 text-blue-600" },
+                  { icon: Award, title: "Positive Psychology", desc: "Mental wellness and positive mindset development", color: "bg-green-50 text-green-600" },
+                  { icon: Stethoscope, title: "Holistic Health", desc: "Complete mind-body wellness approach", color: "bg-purple-50 text-purple-600" }
+                ].map((item, index) => (
+                  <Card key={index} className="professional-card p-4 lg:p-6 text-center hover-lift">
+                    <div className={`w-14 h-14 lg:w-16 lg:h-16 ${item.color.split(' ')[0]} rounded-2xl flex items-center justify-center mx-auto mb-4`}>
+                      <item.icon className={`h-7 w-7 lg:h-8 lg:w-8 ${item.color.split(' ')[1]}`} />
+                    </div>
+                    <h4 className="font-semibold text-gray-900 mb-2 text-sm lg:text-base">{item.title}</h4>
+                    <p className="text-xs lg:text-sm text-gray-600 leading-relaxed">{item.desc}</p>
+                  </Card>
+                ))}
+              </div>
             </div>
+
           </div>
         </div>
       </section>
 
-      {/* Services Section - Enhanced Mobile */}
+      {/* Services Section - Mobile Enhanced */}
       <section id="services" className="section-padding bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 lg:mb-16">
