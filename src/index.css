@@ -3,78 +3,93 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system - Modern Teal & Navy Theme */
+/* New Color Scheme - Burgundy Theme */
 
 @layer base {
   :root {
+    --color-primary: #8A005D;
+    --color-primary-light: #A10076;
+    --color-bg: #FFFFFF;
+    --color-bg-secondary: #F6F6F6;
+    --color-text-primary: #333333;
+    --color-text-secondary: #666666;
+    
+    /* Updated shadcn variables to match new theme */
     --background: 0 0% 100%;
-    --foreground: 213 27% 84%;
+    --foreground: 0 0% 20%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 213 27% 84%;
+    --card: 0 0% 96.5%;
+    --card-foreground: 0 0% 20%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 213 27% 84%;
+    --popover-foreground: 0 0% 20%;
 
-    --primary: 184 91% 17%;
+    --primary: 330 100% 27%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 184 44% 94%;
-    --secondary-foreground: 184 91% 17%;
+    --secondary: 0 0% 96.5%;
+    --secondary-foreground: 330 100% 27%;
 
-    --muted: 184 44% 94%;
-    --muted-foreground: 184 25% 35%;
+    --muted: 0 0% 96.5%;
+    --muted-foreground: 0 0% 40%;
 
-    --accent: 172 100% 24%;
+    --accent: 330 100% 32%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 184 20% 85%;
-    --input: 184 20% 85%;
-    --ring: 184 91% 17%;
+    --border: 0 0% 90%;
+    --input: 0 0% 90%;
+    --ring: 330 100% 27%;
 
     --radius: 0.75rem;
 
-    --sidebar-background: 184 44% 96%;
-    --sidebar-foreground: 184 91% 17%;
-    --sidebar-primary: 184 91% 17%;
+    --sidebar-background: 0 0% 96.5%;
+    --sidebar-foreground: 330 100% 27%;
+    --sidebar-primary: 330 100% 27%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 184 44% 90%;
-    --sidebar-accent-foreground: 184 91% 17%;
-    --sidebar-border: 184 20% 85%;
-    --sidebar-ring: 184 91% 17%;
+    --sidebar-accent: 0 0% 92%;
+    --sidebar-accent-foreground: 330 100% 27%;
+    --sidebar-border: 0 0% 90%;
+    --sidebar-ring: 330 100% 27%;
   }
 
   .dark {
-    --background: 213 27% 9%;
-    --foreground: 0 0% 95%;
-    --card: 213 27% 12%;
-    --card-foreground: 0 0% 95%;
-    --popover: 213 27% 12%;
-    --popover-foreground: 0 0% 95%;
-    --primary: 172 100% 41%;
-    --primary-foreground: 213 27% 9%;
-    --secondary: 213 27% 16%;
-    --secondary-foreground: 0 0% 95%;
-    --muted: 213 27% 16%;
-    --muted-foreground: 213 13% 65%;
-    --accent: 184 91% 35%;
+    --color-primary: #A10076;
+    --color-primary-light: #B8208A;
+    --color-bg: #1A1A1A;
+    --color-bg-secondary: #2A2A2A;
+    --color-text-primary: #E5E5E5;
+    --color-text-secondary: #B0B0B0;
+    
+    --background: 0 0% 10%;
+    --foreground: 0 0% 90%;
+    --card: 0 0% 16%;
+    --card-foreground: 0 0% 90%;
+    --popover: 0 0% 16%;
+    --popover-foreground: 0 0% 90%;
+    --primary: 330 100% 32%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 0 0% 20%;
+    --secondary-foreground: 0 0% 90%;
+    --muted: 0 0% 20%;
+    --muted-foreground: 0 0% 60%;
+    --accent: 330 100% 40%;
     --accent-foreground: 0 0% 100%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
-    --border: 213 27% 20%;
-    --input: 213 27% 20%;
-    --ring: 172 100% 41%;
-    --sidebar-background: 213 27% 12%;
-    --sidebar-foreground: 0 0% 95%;
-    --sidebar-primary: 172 100% 41%;
+    --border: 0 0% 24%;
+    --input: 0 0% 24%;
+    --ring: 330 100% 32%;
+    --sidebar-background: 0 0% 16%;
+    --sidebar-foreground: 0 0% 90%;
+    --sidebar-primary: 330 100% 32%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 213 27% 16%;
-    --sidebar-accent-foreground: 0 0% 95%;
-    --sidebar-border: 213 27% 20%;
-    --sidebar-ring: 172 100% 41%;
+    --sidebar-accent: 0 0% 20%;
+    --sidebar-accent-foreground: 0 0% 90%;
+    --sidebar-border: 0 0% 24%;
+    --sidebar-ring: 330 100% 32%;
   }
 }
 
@@ -84,12 +99,20 @@
   }
 
   body {
-    @apply bg-background text-foreground;
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background: var(--color-bg);
+    color: var(--color-text-primary);
+    font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+    color: var(--color-text-primary);
   }
 }
 
-/* Modern Teal & Navy Design Animations */
+/* New Burgundy Theme Utilities */
 @layer utilities {
   .animate-fade-in {
     animation: fadeIn 0.5s ease-out;
@@ -109,22 +132,59 @@
   
   .hover-lift:hover {
     transform: translateY(-4px);
-    box-shadow: 0 10px 30px rgba(20, 184, 166, 0.15);
+    box-shadow: 0 10px 30px rgba(138, 0, 93, 0.15);
   }
   
   .professional-card {
-    @apply bg-white rounded-xl shadow-sm border border-teal-50 hover:shadow-lg hover:border-teal-100 transition-all duration-300;
+    background: var(--color-bg-secondary);
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    padding: 20px;
+    transition: all 0.3s ease;
+  }
+  
+  .professional-card:hover {
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
   }
   
   .medical-gradient {
-    background: linear-gradient(135deg, #0d9488 0%, #0f766e 100%);
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
   }
   
   .text-gradient {
-    background: linear-gradient(135deg, #0d9488 0%, #0f766e 100%);
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+  }
+
+  .btn {
+    background: var(--color-primary);
+    color: #fff;
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-transform: uppercase;
+    font-weight: 600;
+    transition: background 0.3s ease;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+  }
+
+  .btn:hover {
+    background: var(--color-primary-light);
+  }
+
+  .section {
+    padding: 80px 20px;
+  }
+
+  .card {
+    background: var(--color-bg-secondary);
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    padding: 20px;
   }
 }
 
@@ -175,44 +235,93 @@ html {
     margin: 0.75rem;
     padding: 1.25rem;
   }
+
+  .section {
+    padding: 60px 15px;
+  }
 }
 
-/* Modern Teal & Navy color palette */
-.medical-blue {
-  background: linear-gradient(135deg, #0d9488 0%, #0f766e 100%);
+/* Updated color palette classes */
+.medical-burgundy {
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
 }
 
 .medical-light {
-  background: linear-gradient(135deg, #f0fdfa 0%, #e6fffa 100%);
+  background: linear-gradient(135deg, var(--color-bg) 0%, var(--color-bg-secondary) 100%);
 }
 
 .medical-accent {
-  background: linear-gradient(135deg, #14b8a6 0%, #0d9488 100%);
+  background: linear-gradient(135deg, var(--color-primary-light) 0%, var(--color-primary) 100%);
 }
 
 /* Professional button styles */
 .btn-medical {
-  @apply bg-teal-600 hover:bg-teal-700 text-white font-medium px-6 py-3 rounded-lg transition-all duration-200 shadow-sm hover:shadow-md;
+  background: var(--color-primary);
+  color: white;
+  font-weight: 600;
+  padding: 12px 24px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  text-transform: uppercase;
+}
+
+.btn-medical:hover {
+  background: var(--color-primary-light);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  transform: translateY(-1px);
 }
 
 .btn-medical-outline {
-  @apply border-2 border-teal-600 text-teal-600 hover:bg-teal-600 hover:text-white font-medium px-6 py-3 rounded-lg transition-all duration-200;
+  border: 2px solid var(--color-primary);
+  color: var(--color-primary);
+  background: transparent;
+  font-weight: 600;
+  padding: 10px 22px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+}
+
+.btn-medical-outline:hover {
+  background: var(--color-primary);
+  color: white;
 }
 
 /* Professional section spacing */
 .section-padding {
-  @apply py-16 lg:py-20;
+  padding: 80px 20px;
 }
 
 /* Clean typography */
 .heading-primary {
-  @apply text-4xl lg:text-5xl font-bold text-slate-800 leading-tight;
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  line-height: 1.2;
 }
 
 .heading-secondary {
-  @apply text-3xl lg:text-4xl font-bold text-slate-800 mb-4;
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin-bottom: 1rem;
 }
 
 .text-body {
-  @apply text-lg text-slate-600 leading-relaxed;
+  font-size: 1.125rem;
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+}
+
+@media (min-width: 1024px) {
+  .heading-primary {
+    font-size: 3rem;
+  }
+  
+  .heading-secondary {
+    font-size: 2.5rem;
+  }
 }
