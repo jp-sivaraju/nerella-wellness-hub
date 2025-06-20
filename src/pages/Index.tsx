@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Calendar, Phone, Star, Play, ChevronRight, Heart, Users, Award, MapPin, Instagram, Youtube, Facebook, Stethoscope, Clock, Shield } from 'lucide-react';
 import { Button } from "@/components/ui/button";
@@ -281,6 +280,54 @@ const Index = () => {
                     <div className="w-2 h-2 bg-purple-600 rounded-full mt-2"></div>
                     <p className="text-gray-700 font-medium text-sm lg:text-base">Certified by The Society of Neuro Linguistic Programming</p>
                   </div>
+                </div>
+              </div>
+
+              {/* Social Media Section */}
+              <div className="professional-card p-6 lg:p-8 space-y-4">
+                <div className="flex items-center space-x-3 mb-4">
+                  <div className="w-12 h-12 bg-pink-100 rounded-lg flex items-center justify-center">
+                    <Instagram className="h-6 w-6 text-pink-600" />
+                  </div>
+                  <h4 className="text-lg lg:text-xl font-semibold text-gray-900">Follow Dr. Prathusha</h4>
+                </div>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 lg:gap-4">
+                  <a 
+                    href="https://www.instagram.com/drprathushanerella" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="flex items-center space-x-2 lg:space-x-3 p-3 bg-gradient-to-r from-pink-500 to-purple-600 rounded-lg hover:scale-105 transition-transform text-white"
+                  >
+                    <Instagram className="h-4 w-4 lg:h-5 lg:w-5" />
+                    <span className="text-xs lg:text-sm font-medium">@drprathushanerella</span>
+                  </a>
+                  <a 
+                    href="https://www.youtube.com/@pravehaintegrative" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="flex items-center space-x-2 lg:space-x-3 p-3 bg-red-600 rounded-lg hover:scale-105 transition-transform text-white"
+                  >
+                    <Youtube className="h-4 w-4 lg:h-5 lg:w-5" />
+                    <span className="text-xs lg:text-sm font-medium">@pravehaintegrative</span>
+                  </a>
+                  <a 
+                    href="https://www.facebook.com/drprathushanerella/" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="flex items-center space-x-2 lg:space-x-3 p-3 bg-blue-600 rounded-lg hover:scale-105 transition-transform text-white"
+                  >
+                    <Facebook className="h-4 w-4 lg:h-5 lg:w-5" />
+                    <span className="text-xs lg:text-sm font-medium">drprathushanerella</span>
+                  </a>
+                  <a 
+                    href="https://www.threads.com/@drprathushanerella" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="flex items-center space-x-2 lg:space-x-3 p-3 bg-gray-700 rounded-lg hover:scale-105 transition-transform text-white"
+                  >
+                    <div className="h-4 w-4 lg:h-5 lg:w-5 font-bold">@</div>
+                    <span className="text-xs lg:text-sm font-medium">@drprathushanerella</span>
+                  </a>
                 </div>
               </div>
             </div>
@@ -578,7 +625,7 @@ const Index = () => {
       {/* Footer - Enhanced Colors and Mobile */}
       <footer className="bg-gray-900 text-white py-8 lg:py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
             <div>
               <div className="flex items-center space-x-3 mb-4">
                 <div className="w-12 h-12 medical-gradient rounded-full flex items-center justify-center">
@@ -595,76 +642,17 @@ const Index = () => {
             </div>
 
             <div>
-              <h4 className="text-lg font-semibold mb-4 text-white">Quick Links</h4>
-              <div className="space-y-2">
-                {navItems.map((item) => (
-                  <button 
-                    key={item.id}
-                    onClick={() => scrollToSection(item.id)}
-                    className="block text-gray-200 hover:text-white transition-colors text-sm lg:text-base"
-                  >
-                    {item.label}
-                  </button>
-                ))}
-                <button 
-                  onClick={() => navigate('/patient-registration')}
-                  className="block text-gray-200 hover:text-white transition-colors text-sm lg:text-base"
-                >
-                  Patient Registration
-                </button>
-              </div>
-            </div>
-
-            <div>
-              <h4 className="text-lg font-semibold mb-4 text-white">Follow Dr. Prathusha</h4>
-              <div className="grid grid-cols-2 gap-3 lg:gap-4 mb-6">
-                <a 
-                  href="https://www.instagram.com/drprathushanerella" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="flex items-center space-x-2 lg:space-x-3 p-2 lg:p-3 bg-gradient-to-r from-pink-500 to-purple-600 rounded-lg hover:scale-105 transition-transform"
-                >
-                  <Instagram className="h-4 w-4 lg:h-5 lg:w-5 text-white" />
-                  <span className="text-xs lg:text-sm font-medium text-white">@drprathushanerella</span>
-                </a>
-                <a 
-                  href="https://www.youtube.com/@pravehaintegrative" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="flex items-center space-x-2 lg:space-x-3 p-2 lg:p-3 bg-red-600 rounded-lg hover:scale-105 transition-transform"
-                >
-                  <Youtube className="h-4 w-4 lg:h-5 lg:w-5 text-white" />
-                  <span className="text-xs lg:text-sm font-medium text-white">@pravehaintegrative</span>
-                </a>
-                <a 
-                  href="https://www.facebook.com/drprathushanerella/" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="flex items-center space-x-2 lg:space-x-3 p-2 lg:p-3 bg-blue-600 rounded-lg hover:scale-105 transition-transform"
-                >
-                  <Facebook className="h-4 w-4 lg:h-5 lg:w-5 text-white" />
-                  <span className="text-xs lg:text-sm font-medium text-white">drprathushanerella</span>
-                </a>
-                <a 
-                  href="https://www.threads.com/@drprathushanerella" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="flex items-center space-x-2 lg:space-x-3 p-2 lg:p-3 bg-gray-700 rounded-lg hover:scale-105 transition-transform"
-                >
-                  <div className="h-4 w-4 lg:h-5 lg:w-5 font-bold text-white">@</div>
-                  <span className="text-xs lg:text-sm font-medium text-white">@drprathushanerella</span>
-                </a>
-              </div>
+              <h4 className="text-lg font-semibold mb-4 text-white">Contact Information</h4>
               <div className="space-y-2 text-sm text-gray-200">
                 <p className="flex items-center">
-                  <MapPin className="h-4 w-4 mr-2 text-gray-200" />
+                  <MapPin className="h-4 w-4 mr-2" />
                   Ramakrishna Math, Hyderabad
                 </p>
                 <p className="flex items-center">
-                  <Phone className="h-4 w-4 mr-2 text-gray-200" />
+                  <Phone className="h-4 w-4 mr-2" />
                   +91 98765 43210
                 </p>
-                <p className="text-gray-200">✉️ consultation@drprathushanerella.com</p>
+                <p>✉️ consultation@drprathushanerella.com</p>
               </div>
             </div>
           </div>
