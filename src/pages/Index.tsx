@@ -115,14 +115,6 @@ const Index = () => {
                 Patient Registration
               </button>
             </div>
-
-            <Button 
-              onClick={() => scrollToSection('contact')}
-              className="btn-medical text-xs lg:text-sm px-3 lg:px-6 py-2 lg:py-3"
-            >
-              <Calendar className="h-4 w-4 mr-2" />
-              <span className="hidden sm:inline">Book </span>Appointment
-            </Button>
           </div>
         </div>
       </nav>
@@ -639,6 +631,17 @@ const Index = () => {
           </div>
         </div>
       </section>
+
+      {/* Footer */}
+      <footer className="bg-gray-900 text-white py-6">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <p className="text-sm text-gray-300">
+              © 2024 Dr. Prathusha Nerella. All rights reserved. | Designed for comprehensive healthcare excellence
+            </p>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 };
