@@ -625,7 +625,7 @@ const Index = () => {
                   className="flex items-center space-x-2 lg:space-x-3 p-2 lg:p-3 bg-gradient-to-r from-pink-500 to-purple-600 rounded-lg hover:scale-105 transition-transform"
                 >
                   <Instagram className="h-4 w-4 lg:h-5 lg:w-5 text-white" />
-                  <span className="text-xs lg:text-sm font-medium text-white">Instagram</span>
+                  <span className="text-xs lg:text-sm font-medium text-white">@drprathushanerella</span>
                 </a>
                 <a 
                   href="https://www.youtube.com/@pravehaintegrative" 
@@ -634,7 +634,7 @@ const Index = () => {
                   className="flex items-center space-x-2 lg:space-x-3 p-2 lg:p-3 bg-red-600 rounded-lg hover:scale-105 transition-transform"
                 >
                   <Youtube className="h-4 w-4 lg:h-5 lg:w-5 text-white" />
-                  <span className="text-xs lg:text-sm font-medium text-white">YouTube</span>
+                  <span className="text-xs lg:text-sm font-medium text-white">@pravehaintegrative</span>
                 </a>
                 <a 
                   href="https://www.facebook.com/drprathushanerella/" 
@@ -643,7 +643,7 @@ const Index = () => {
                   className="flex items-center space-x-2 lg:space-x-3 p-2 lg:p-3 bg-blue-600 rounded-lg hover:scale-105 transition-transform"
                 >
                   <Facebook className="h-4 w-4 lg:h-5 lg:w-5 text-white" />
-                  <span className="text-xs lg:text-sm font-medium text-white">Facebook</span>
+                  <span className="text-xs lg:text-sm font-medium text-white">drprathushanerella</span>
                 </a>
                 <a 
                   href="https://www.threads.com/@drprathushanerella" 
@@ -652,7 +652,7 @@ const Index = () => {
                   className="flex items-center space-x-2 lg:space-x-3 p-2 lg:p-3 bg-gray-700 rounded-lg hover:scale-105 transition-transform"
                 >
                   <div className="h-4 w-4 lg:h-5 lg:w-5 font-bold text-white">@</div>
-                  <span className="text-xs lg:text-sm font-medium text-white">Threads</span>
+                  <span className="text-xs lg:text-sm font-medium text-white">@drprathushanerella</span>
                 </a>
               </div>
               <div className="space-y-2 text-sm text-gray-200">
