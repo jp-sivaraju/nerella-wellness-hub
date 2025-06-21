@@ -21,7 +21,10 @@ const HeroSection = ({ scrollToSection }: HeroSectionProps) => {
                 12+ Years Experience • 10,000+ Patients Treated
               </Badge>
               <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 leading-tight">
-                Nerella Wellness Hub
+                Dr. Prathusha Nerella
+                <span className="block text-2xl sm:text-3xl lg:text-4xl xl:text-5xl text-gradient mt-2 font-medium">
+                  Nerella Wellness Hub
+                </span>
                 <span className="block text-xl sm:text-2xl lg:text-3xl xl:text-4xl text-gradient mt-2 lg:mt-4 font-medium">
                   Holistic Healing | Compassionate Care | Modern Wellness
                 </span>
