@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { Calendar, Stethoscope } from 'lucide-react';
+import { Calendar, Stethoscope, Phone, Mail, MapPin } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import HeroSection from '@/components/sections/HeroSection';
 import AboutSection from '@/components/sections/AboutSection';
