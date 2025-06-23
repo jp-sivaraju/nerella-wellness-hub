@@ -23,7 +23,7 @@ const Index = () => {
     { id: 'contact', label: 'Contact Us' }
   ];
 
-  const scrollToSection = (sectionId: string) => {
+  const scrollToSection = (sectionId) => {
     setActiveTab(sectionId);
     const element = document.getElementById(sectionId);
     element?.scrollIntoView({ behavior: 'smooth' });

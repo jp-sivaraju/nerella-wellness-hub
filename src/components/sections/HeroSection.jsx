@@ -4,11 +4,7 @@ import { Calendar, ChevronRight, Shield, Heart, Users, Award, Phone } from 'luci
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 
-interface HeroSectionProps {
-  scrollToSection: (sectionId: string) => void;
-}
-
-const HeroSection = ({ scrollToSection }: HeroSectionProps) => {
+const HeroSection = ({ scrollToSection }) => {
   return (
     <section id="home" className="section-padding bg-gradient-to-br from-teal-50 via-white to-blue-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

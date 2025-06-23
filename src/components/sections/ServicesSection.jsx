@@ -4,11 +4,7 @@ import { Heart, Users, Award, Stethoscope, Brain, Shield, Activity, Leaf } from 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 
-interface ServicesSectionProps {
-  scrollToSection: (sectionId: string) => void;
-}
-
-const ServicesSection = ({ scrollToSection }: ServicesSectionProps) => {
+const ServicesSection = ({ scrollToSection }) => {
   const services = [
     {
       title: "General Medicine",
