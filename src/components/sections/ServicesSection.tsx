@@ -14,37 +14,37 @@ const ServicesSection = ({ scrollToSection }: ServicesSectionProps) => {
       title: "General Medicine",
       description: "Comprehensive primary healthcare services for all ages with personalized treatment plans",
       icon: Stethoscope,
-      color: "text-teal-600"
+      color: "text-pink-600"
     },
     {
       title: "Diabetes Management",
       description: "Expert diabetes care with lifestyle interventions and continuous monitoring",
       icon: Heart,
-      color: "text-red-600"
+      color: "text-rose-600"
     },
     {
       title: "Preventive Health",
       description: "Proactive health screenings and wellness programs to prevent illness before it starts",
       icon: Shield,
-      color: "text-blue-600"
+      color: "text-purple-600"
     },
     {
       title: "Mental Wellness",
       description: "Psychological support and positive psychology counseling for emotional well-being",
       icon: Brain,
-      color: "text-purple-600"
+      color: "text-fuchsia-600"
     },
     {
       title: "Lifestyle Medicine",
       description: "Evidence-based lifestyle interventions for optimal health and disease prevention",
       icon: Activity,
-      color: "text-green-600"
+      color: "text-violet-600"
     },
     {
       title: "Holistic Health",
       description: "Integrated approach combining traditional medicine with complementary therapies",
       icon: Leaf,
-      color: "text-orange-600"
+      color: "text-emerald-600"
     },
     {
       title: "Physiotherapy",
@@ -75,7 +75,7 @@ const ServicesSection = ({ scrollToSection }: ServicesSectionProps) => {
             <Card key={index} className="professional-card p-6 lg:p-8 hover-lift group text-center">
               <CardContent className="p-0 space-y-4 lg:space-y-6">
                 <div className="relative">
-                  <div className={`w-16 h-16 lg:w-20 lg:h-20 bg-gray-50 rounded-2xl flex items-center justify-center mx-auto group-hover:scale-110 transition-transform duration-300`}>
+                  <div className={`w-16 h-16 lg:w-20 lg:h-20 bg-pink-50 rounded-2xl flex items-center justify-center mx-auto group-hover:scale-110 transition-transform duration-300`}>
                     <service.icon className={`h-8 w-8 lg:h-10 lg:w-10 ${service.color}`} />
                   </div>
                 </div>

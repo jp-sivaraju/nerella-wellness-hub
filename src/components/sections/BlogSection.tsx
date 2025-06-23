@@ -29,7 +29,7 @@ const BlogSection = () => {
       date: "December 10, 2024",
       readTime: "7 min read",
       icon: Heart,
-      color: "bg-red-100 text-red-700"
+      color: "bg-rose-100 text-rose-700"
     },
     {
       id: 3,
@@ -41,7 +41,7 @@ const BlogSection = () => {
       date: "December 5, 2024",
       readTime: "6 min read",
       icon: Leaf,
-      color: "bg-green-100 text-green-700"
+      color: "bg-pink-100 text-pink-700"
     }
   ];
 
@@ -74,7 +74,7 @@ const BlogSection = () => {
               
               <CardContent className="p-6 space-y-4">
                 <div className="space-y-3">
-                  <h3 className="text-lg lg:text-xl font-semibold text-gray-900 line-clamp-2 group-hover:text-teal-600 transition-colors">
+                  <h3 className="text-lg lg:text-xl font-semibold text-gray-900 line-clamp-2 group-hover:text-pink-600 transition-colors">
                     {post.title}
                   </h3>
                   <p className="text-sm lg:text-base text-gray-600 line-clamp-3 leading-relaxed">
@@ -100,7 +100,7 @@ const BlogSection = () => {
                   <Button 
                     variant="ghost" 
                     size="sm"
-                    className="text-teal-600 hover:text-teal-700 hover:bg-teal-50 p-2"
+                    className="text-pink-600 hover:text-pink-700 hover:bg-pink-50 p-2"
                   >
                     Read More
                     <ArrowRight className="h-4 w-4 ml-1" />

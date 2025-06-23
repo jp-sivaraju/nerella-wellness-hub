@@ -3,95 +3,95 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Wellness Hub Theme - Teal & Blue Color Scheme */
+/* Wellness Hub Theme - Pink & Rose Color Scheme */
 
 @layer base {
   :root {
-    --color-primary: #0D9488;
-    --color-primary-light: #14B8A6;
-    --color-secondary: #0EA5E9;
+    --color-primary: #EC4899;
+    --color-primary-light: #F472B6;
+    --color-secondary: #BE185D;
     --color-bg: #FFFFFF;
-    --color-bg-secondary: #F8FAFC;
+    --color-bg-secondary: #FDF2F8;
     --color-text-primary: #1F2937;
     --color-text-secondary: #6B7280;
     
-    /* Updated shadcn variables to match wellness theme */
+    /* Updated shadcn variables to match pink wellness theme */
     --background: 0 0% 100%;
     --foreground: 220 13% 18%;
 
-    --card: 210 40% 98%;
+    --card: 327 73% 97%;
     --card-foreground: 220 13% 18%;
 
     --popover: 0 0% 100%;
     --popover-foreground: 220 13% 18%;
 
-    --primary: 173 80% 36%;
+    --primary: 330 81% 60%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 210 40% 96%;
-    --secondary-foreground: 173 80% 36%;
+    --secondary: 327 73% 97%;
+    --secondary-foreground: 330 81% 60%;
 
-    --muted: 210 40% 96%;
+    --muted: 327 73% 97%;
     --muted-foreground: 220 9% 46%;
 
-    --accent: 199 89% 48%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 322 84% 95%;
+    --accent-foreground: 330 81% 60%;
 
     --destructive: 0, 84%, 60%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 327 73% 97%;
 
-    --border: 220 13% 91%;
-    --input: 220 13% 91%;
-    --ring: 173 80% 36%;
+    --border: 322 84% 95%;
+    --input: 322 84% 95%;
+    --ring: 330 81% 60%;
 
     --radius: 0.75rem;
 
-    --sidebar-background: 210 40% 98%;
-    --sidebar-foreground: 173 80% 36%;
-    --sidebar-primary: 173 80% 36%;
+    --sidebar-background: 327 73% 97%;
+    --sidebar-foreground: 330 81% 60%;
+    --sidebar-primary: 330 81% 60%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 210 40% 93%;
-    --sidebar-accent-foreground: 173 80% 36%;
-    --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 173 80% 36%;
+    --sidebar-accent: 322 84% 95%;
+    --sidebar-accent-foreground: 330 81% 60%;
+    --sidebar-border: 322 84% 95%;
+    --sidebar-ring: 330 81% 60%;
   }
 
   .dark {
-    --color-primary: #14B8A6;
-    --color-primary-light: #2DD4BF;
-    --color-secondary: #38BDF8;
+    --color-primary: #F472B6;
+    --color-primary-light: #FBCFE8;
+    --color-secondary: #EC4899;
     --color-bg: #0F172A;
     --color-bg-secondary: #1E293B;
     --color-text-primary: #F1F5F9;
     --color-text-secondary: #CBD5E1;
     
     --background: 222 84% 5%;
-    --foreground: 210 40% 98%;
+    --foreground: 327 73% 97%;
     --card: 222 84% 5%;
-    --card-foreground: 210 40% 98%;
+    --card-foreground: 327 73% 97%;
     --popover: 222 84% 5%;
-    --popover-foreground: 210 40% 98%;
-    --primary: 166 76% 46%;
+    --popover-foreground: 327 73% 97%;
+    --primary: 330 81% 70%;
     --primary-foreground: 0 0% 100%;
     --secondary: 217 33% 17%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary-foreground: 327 73% 97%;
     --muted: 217 33% 17%;
     --muted-foreground: 215 20% 65%;
-    --accent: 199 89% 48%;
+    --accent: 330 81% 70%;
     --accent-foreground: 0 0% 100%;
     --destructive: 0 63% 31%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 327 73% 97%;
     --border: 217 33% 17%;
     --input: 217 33% 17%;
-    --ring: 166 76% 46%;
+    --ring: 330 81% 70%;
     --sidebar-background: 222 84% 5%;
-    --sidebar-foreground: 210 40% 98%;
-    --sidebar-primary: 166 76% 46%;
+    --sidebar-foreground: 327 73% 97%;
+    --sidebar-primary: 330 81% 70%;
     --sidebar-primary-foreground: 0 0% 100%;
     --sidebar-accent: 217 33% 17%;
-    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-accent-foreground: 327 73% 97%;
     --sidebar-border: 217 33% 17%;
-    --sidebar-ring: 166 76% 46%;
+    --sidebar-ring: 330 81% 70%;
   }
 }
 
@@ -134,19 +134,19 @@
   
   .hover-lift:hover {
     transform: translateY(-8px);
-    box-shadow: 0 20px 40px rgba(13, 148, 136, 0.15);
+    box-shadow: 0 20px 40px rgba(236, 72, 153, 0.15);
   }
   
   .professional-card {
     background: var(--color-bg-secondary);
     border-radius: 16px;
-    border: 1px solid #E2E8F0;
+    border: 1px solid #FBCFE8;
     transition: all 0.3s ease;
   }
   
   .professional-card:hover {
-    box-shadow: 0 10px 30px rgba(13, 148, 136, 0.1);
-    border-color: #CBD5E1;
+    box-shadow: 0 10px 30px rgba(236, 72, 153, 0.1);
+    border-color: #F9A8D4;
   }
   
   .wellness-gradient {
@@ -215,13 +215,13 @@ html {
   padding: 0.875rem 2rem;
   border-radius: 12px;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 12px rgba(13, 148, 136, 0.2);
+  box-shadow: 0 4px 12px rgba(236, 72, 153, 0.2);
   border: none;
 }
 
 .btn-wellness:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(13, 148, 136, 0.3);
+  box-shadow: 0 8px 20px rgba(236, 72, 153, 0.3);
   background: linear-gradient(135deg, var(--color-primary-light) 0%, var(--color-secondary) 100%);
 }
 
@@ -239,7 +239,7 @@ html {
   background: var(--color-primary);
   color: white;
   transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(13, 148, 136, 0.2);
+  box-shadow: 0 6px 16px rgba(236, 72, 153, 0.2);
 }
 
 /* Typography */
@@ -283,11 +283,11 @@ html {
 
 /* Enhanced Visual Elements */
 .wellness-accent {
-  background: linear-gradient(135deg, #F0FDFA 0%, #ECFEFF 100%);
+  background: linear-gradient(135deg, #FDF2F8 0%, #FCE7F3 100%);
 }
 
 .wellness-light {
-  background: linear-gradient(135deg, #FAFAFA 0%, #F8FAFC 100%);
+  background: linear-gradient(135deg, #FAFAFA 0%, #FDF2F8 100%);
 }
 
 /* Focus States for Accessibility */

@@ -10,14 +10,14 @@ interface HeroSectionProps {
 
 const HeroSection = ({ scrollToSection }: HeroSectionProps) => {
   return (
-    <section id="home" className="section-padding bg-gradient-to-br from-teal-50 via-white to-blue-50">
+    <section id="home" className="section-padding bg-gradient-to-br from-pink-50 via-white to-rose-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left Content */}
           <div className="space-y-8 animate-fade-in text-center lg:text-left order-2 lg:order-1">
             <div className="space-y-6">
               <div className="flex justify-center lg:justify-start">
-                <Badge className="bg-teal-50 text-teal-700 border-teal-200">
+                <Badge className="bg-pink-50 text-pink-700 border-pink-200">
                   <Award className="h-4 w-4 mr-2" />
                   12+ Years Experience • 10,000+ Patients Treated
                 </Badge>
@@ -35,15 +35,15 @@ const HeroSection = ({ scrollToSection }: HeroSectionProps) => {
               </div>
               <div className="space-y-4 text-lg text-gray-600 max-w-2xl mx-auto lg:mx-0">
                 <div className="flex items-center justify-center lg:justify-start gap-3">
-                  <Shield className="h-6 w-6 text-teal-600 flex-shrink-0" /> 
+                  <Shield className="h-6 w-6 text-pink-600 flex-shrink-0" /> 
                   <span>Comprehensive Health & Wellness Solutions</span>
                 </div>
                 <div className="flex items-center justify-center lg:justify-start gap-3">
-                  <Heart className="h-6 w-6 text-red-500 flex-shrink-0" /> 
+                  <Heart className="h-6 w-6 text-rose-500 flex-shrink-0" /> 
                   <span>Personalized Care for Mind, Body & Spirit</span>
                 </div>
                 <div className="flex items-center justify-center lg:justify-start gap-3">
-                  <Users className="h-6 w-6 text-blue-600 flex-shrink-0" /> 
+                  <Users className="h-6 w-6 text-purple-600 flex-shrink-0" /> 
                   <span>Expert Medical Team with Holistic Approach</span>
                 </div>
               </div>
@@ -73,15 +73,15 @@ const HeroSection = ({ scrollToSection }: HeroSectionProps) => {
 
             <div className="grid grid-cols-3 gap-6 pt-8 border-t border-gray-200">
               <div className="text-center">
-                <div className="text-3xl lg:text-4xl font-bold text-teal-600 mb-2">12+</div>
+                <div className="text-3xl lg:text-4xl font-bold text-pink-600 mb-2">12+</div>
                 <div className="text-sm text-gray-600 font-medium">Years Experience</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl lg:text-4xl font-bold text-blue-600 mb-2">10K+</div>
+                <div className="text-3xl lg:text-4xl font-bold text-rose-600 mb-2">10K+</div>
                 <div className="text-sm text-gray-600 font-medium">Happy Patients</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl lg:text-4xl font-bold text-green-600 mb-2">98%</div>
+                <div className="text-3xl lg:text-4xl font-bold text-purple-600 mb-2">98%</div>
                 <div className="text-sm text-gray-600 font-medium">Success Rate</div>
               </div>
             </div>

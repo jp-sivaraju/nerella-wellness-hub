@@ -41,7 +41,7 @@ const Index = () => {
               </div>
               <div className="text-left">
                 <h1 className="text-xl font-bold text-gray-900">Nerella Wellness Hub</h1>
-                <p className="text-sm text-teal-600 font-medium">Dr. Prathusha Nerella • Holistic Care</p>
+                <p className="text-sm text-pink-600 font-medium">Dr. Prathusha Nerella • Holistic Care</p>
               </div>
             </div>
             
@@ -52,19 +52,19 @@ const Index = () => {
                   onClick={() => scrollToSection(item.id)}
                   className={`text-sm font-medium transition-colors duration-200 py-2 px-1 relative ${
                     activeTab === item.id 
-                      ? 'text-teal-600' 
-                      : 'text-gray-700 hover:text-teal-600'
+                      ? 'text-pink-600' 
+                      : 'text-gray-700 hover:text-pink-600'
                   }`}
                 >
                   {item.label}
                   {activeTab === item.id && (
-                    <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-teal-600 rounded-full"></div>
+                    <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-pink-600 rounded-full"></div>
                   )}
                 </button>
               ))}
               <button
                 onClick={() => navigate('/patient-registration')}
-                className="bg-teal-600 hover:bg-teal-700 text-white px-6 py-2 rounded-lg font-medium transition-colors duration-200"
+                className="bg-pink-600 hover:bg-pink-700 text-white px-6 py-2 rounded-lg font-medium transition-colors duration-200"
               >
                 Patient Registration
               </button>
@@ -93,7 +93,7 @@ const Index = () => {
                 </div>
                 <div>
                   <h3 className="text-xl font-bold">Nerella Wellness Hub</h3>
-                  <p className="text-teal-400 text-sm">Dr. Prathusha Nerella</p>
+                  <p className="text-pink-400 text-sm">Dr. Prathusha Nerella</p>
                 </div>
               </div>
               <p className="text-gray-300 mb-6 max-w-md leading-relaxed">
@@ -103,9 +103,9 @@ const Index = () => {
                 <input
                   type="email"
                   placeholder="Subscribe to wellness newsletter"
-                  className="w-full max-w-sm px-4 py-3 rounded-lg border border-gray-600 bg-gray-800 text-white focus:ring-2 focus:ring-teal-500 focus:border-teal-500 transition-colors"
+                  className="w-full max-w-sm px-4 py-3 rounded-lg border border-gray-600 bg-gray-800 text-white focus:ring-2 focus:ring-pink-500 focus:border-pink-500 transition-colors"
                 />
-                <button className="px-6 py-3 bg-teal-600 hover:bg-teal-700 rounded-lg font-medium transition-colors">
+                <button className="px-6 py-3 bg-pink-600 hover:bg-pink-700 rounded-lg font-medium transition-colors">
                   Subscribe
                 </button>
               </div>
@@ -114,10 +114,10 @@ const Index = () => {
             <div>
               <h4 className="font-semibold mb-6 text-lg">Quick Links</h4>
               <ul className="space-y-3 text-gray-300">
-                <li><button onClick={() => scrollToSection('about')} className="hover:text-teal-400 transition-colors">About Dr. Nerella</button></li>
-                <li><button onClick={() => scrollToSection('services')} className="hover:text-teal-400 transition-colors">Our Services</button></li>
-                <li><button onClick={() => scrollToSection('testimonials')} className="hover:text-teal-400 transition-colors">Patient Reviews</button></li>
-                <li><button onClick={() => scrollToSection('contact')} className="hover:text-teal-400 transition-colors">Schedule Consultation</button></li>
+                <li><button onClick={() => scrollToSection('about')} className="hover:text-pink-400 transition-colors">About Dr. Nerella</button></li>
+                <li><button onClick={() => scrollToSection('services')} className="hover:text-pink-400 transition-colors">Our Services</button></li>
+                <li><button onClick={() => scrollToSection('testimonials')} className="hover:text-pink-400 transition-colors">Patient Reviews</button></li>
+                <li><button onClick={() => scrollToSection('contact')} className="hover:text-pink-400 transition-colors">Schedule Consultation</button></li>
               </ul>
             </div>
             
@@ -125,13 +125,13 @@ const Index = () => {
               <h4 className="font-semibold mb-6 text-lg">Contact Info</h4>
               <ul className="space-y-3 text-gray-300">
                 <li>
-                  <a href="tel:+919876543210" className="hover:text-teal-400 transition-colors flex items-center gap-2">
+                  <a href="tel:+919876543210" className="hover:text-pink-400 transition-colors flex items-center gap-2">
                     <Phone className="h-4 w-4" />
                     +91 98765 43210
                   </a>
                 </li>
                 <li>
-                  <a href="mailto:info@nerellawellness.com" className="hover:text-teal-400 transition-colors flex items-center gap-2">
+                  <a href="mailto:info@nerellawellness.com" className="hover:text-pink-400 transition-colors flex items-center gap-2">
                     <Mail className="h-4 w-4" />
                     info@nerellawellness.com
                   </a>
