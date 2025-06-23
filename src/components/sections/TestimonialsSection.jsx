@@ -3,78 +3,70 @@ import React from 'react';
 import { Star } from 'lucide-react';
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 
 const TestimonialsSection = () => {
   const testimonials = [
     {
-      name: "Rajesh Kumar",
-      location: "Hyderabad",
-      rating: 5,
-      text: "Dr. Prathusha's holistic approach helped me manage my diabetes effectively. Her positive psychology sessions transformed my outlook towards health and life.",
-      condition: "Diabetes Management",
-      image: "https://images.unsplash.com/photo-1507003211169?w=100&h=100&fit=crop&crop=face"
-    },
-    {
       name: "Priya Sharma",
-      location: "Secunderabad",
+      condition: "Diabetes Management",
       rating: 5,
-      text: "Excellent doctor with deep knowledge and compassionate care. She doesn't just treat symptoms but addresses root causes with lifestyle modifications.",
-      condition: "Lifestyle Consultation",
-      image: "https://images.unsplash.com/photo-1494790108755-2616b612c0cd?w=100&h=100&fit=crop&crop=face"
+      text: "Dr. Prathusha's integrated approach to diabetes care has been life-changing. Her combination of medical expertise and holistic wellness strategies helped me achieve better blood sugar control than I've had in years. The positive psychology techniques she taught me transformed not just my health, but my entire outlook on life.",
+      location: "Hyderabad"
     },
     {
-      name: "Venkat Reddy",
-      location: "Madhapur",
+      name: "Rajesh Kumar",
+      condition: "Mental Wellness",
       rating: 5,
-      text: "Best diabetes specialist in Hyderabad. Her personalized treatment plan and continuous support helped me achieve better blood sugar control and overall wellness.",
-      condition: "Diabetes Care",
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face"
+      text: "After struggling with anxiety for years, Dr. Prathusha's positive psychology approach gave me the tools I needed to thrive. Her compassionate care and evidence-based techniques helped me build resilience and find genuine happiness. I'm grateful for her holistic approach to mental health.",
+      location: "Secunderabad"
+    },
+    {
+      name: "Anitha Reddy",
+      condition: "Lifestyle Medicine",
+      rating: 5,
+      text: "The personalized lifestyle medicine program designed by Dr. Prathusha completely transformed my health. Her scientific approach to nutrition and wellness helped me lose weight sustainably and improve my energy levels. She truly practices what she preaches about holistic health.",
+      location: "Banjara Hills"
     }
   ];
 
   return (
-    <section id="testimonials" className="section-padding bg-white">
+    <section className="relative py-32 bg-white/30 backdrop-blur-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12 lg:mb-16">
-          <h2 className="text-3xl lg:text-4xl xl:text-5xl font-bold text-gray-900 mb-4 lg:mb-6">Patient Testimonials</h2>
-          <p className="text-lg lg:text-xl text-gray-600 leading-relaxed">What our patients say about their healthcare experience</p>
+        <div className="text-center mb-20">
+          <Badge className="bg-gradient-to-r from-purple-50 to-pink-50 text-purple-700 border border-purple-200 px-6 py-3 mb-8">
+            <Star className="h-4 w-4 mr-2" />
+            Patient Success Stories
+          </Badge>
+          <h2 className="text-4xl lg:text-6xl font-bold mb-6">
+            <span className="bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent">Real Results,</span>
+            <br />
+            <span className="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">Real Stories</span>
+          </h2>
+          <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+            Discover how Dr. Prathusha's comprehensive care approach has transformed lives and helped patients achieve 
+            optimal health and wellness through personalized treatment plans.
+          </p>
         </div>
 
-        <Carousel className="w-full">
-          <CarouselContent>
-            {testimonials.map((testimonial, index) => (
-              <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
-                <Card className="professional-card p-6 lg:p-8 h-full">
-                  <CardContent className="p-0 space-y-4 lg:space-y-6">
-                    <div className="flex items-center mb-4">
-                      {[...Array(testimonial.rating)].map((_, i) => (
-                        <Star key={i} className="h-5 w-5 text-yellow-400 fill-current" />
-                      ))}
-                    </div>
-                    <p className="text-sm lg:text-base text-gray-600 italic leading-relaxed">"{testimonial.text}"</p>
-                    <div className="flex items-center space-x-4 pt-4 border-t border-gray-100">
-                      <img 
-                        src={testimonial.image} 
-                        alt={testimonial.name}
-                        className="w-12 h-12 rounded-full object-cover"
-                      />
-                      <div className="flex-1">
-                        <h4 className="font-semibold text-gray-900 text-sm lg:text-base">{testimonial.name}</h4>
-                        <p className="text-xs lg:text-sm text-gray-500">{testimonial.location}</p>
-                      </div>
-                      <Badge variant="secondary" className="text-xs bg-blue-50 text-blue-700">
-                        {testimonial.condition}
-                      </Badge>
-                    </div>
-                  </CardContent>
-                </Card>
-              </CarouselItem>
-            ))}
-          </CarouselContent>
-          <CarouselPrevious />
-          <CarouselNext />
-        </Carousel>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {testimonials.map((testimonial, index) => (
+            <Card key={index} className="bg-white/60 backdrop-blur-lg border border-white/20 shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-105">
+              <CardContent className="p-8 space-y-6">
+                <div className="flex items-center space-x-1">
+                  {[...Array(testimonial.rating)].map((_, i) => (
+                    <Star key={i} className="h-5 w-5 fill-yellow-400 text-yellow-400" />
+                  ))}
+                </div>
+                <p className="text-gray-700 leading-relaxed text-lg">"{testimonial.text}"</p>
+                <div className="border-t pt-6">
+                  <p className="font-bold text-gray-900 text-lg">{testimonial.name}</p>
+                  <p className="text-teal-600 font-medium">{testimonial.condition}</p>
+                  <p className="text-sm text-gray-500">{testimonial.location}</p>
+                </div>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
       </div>
     </section>
   );
