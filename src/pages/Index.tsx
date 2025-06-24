@@ -102,6 +102,22 @@ const Index = () => {
               <Button 
                 size="sm" 
                 variant="secondary"
+                onClick={() => navigate('/testimonials')}
+                className="bg-white text-pink-600 hover:bg-gray-100"
+              >
+                Testimonials <ExternalLink className="h-3 w-3 ml-1" />
+              </Button>
+              <Button 
+                size="sm" 
+                variant="secondary"
+                onClick={() => navigate('/blog')}
+                className="bg-white text-pink-600 hover:bg-gray-100"
+              >
+                Wellness Blog <ExternalLink className="h-3 w-3 ml-1" />
+              </Button>
+              <Button 
+                size="sm" 
+                variant="secondary"
                 onClick={() => navigate('/contact')}
                 className="bg-white text-pink-600 hover:bg-gray-100"
               >
@@ -155,7 +171,8 @@ const Index = () => {
               <ul className="space-y-3 text-gray-300">
                 <li><button onClick={() => navigate('/about')} className="hover:text-pink-400 transition-colors">About Dr. Nerella</button></li>
                 <li><button onClick={() => navigate('/services')} className="hover:text-pink-400 transition-colors">Our Services</button></li>
-                <li><button onClick={() => scrollToSection('testimonials')} className="hover:text-pink-400 transition-colors">Patient Reviews</button></li>
+                <li><button onClick={() => navigate('/testimonials')} className="hover:text-pink-400 transition-colors">Patient Reviews</button></li>
+                <li><button onClick={() => navigate('/blog')} className="hover:text-pink-400 transition-colors">Wellness Blog</button></li>
                 <li><button onClick={() => navigate('/contact')} className="hover:text-pink-400 transition-colors">Schedule Consultation</button></li>
               </ul>
             </div>

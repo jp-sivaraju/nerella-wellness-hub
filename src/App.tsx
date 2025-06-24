@@ -9,6 +9,8 @@ import PatientRegistration from "./pages/PatientRegistration";
 import ServicesShowcase from "./pages/ServicesShowcase";
 import AboutShowcase from "./pages/AboutShowcase";
 import ContactShowcase from "./pages/ContactShowcase";
+import TestimonialsShowcase from "./pages/TestimonialsShowcase";
+import BlogShowcase from "./pages/BlogShowcase";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -25,6 +27,8 @@ const App = () => (
           <Route path="/services" element={<ServicesShowcase />} />
           <Route path="/about" element={<AboutShowcase />} />
           <Route path="/contact" element={<ContactShowcase />} />
+          <Route path="/testimonials" element={<TestimonialsShowcase />} />
+          <Route path="/blog" element={<BlogShowcase />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
