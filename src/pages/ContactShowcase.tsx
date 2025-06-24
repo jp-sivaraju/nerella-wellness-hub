@@ -1,10 +1,10 @@
-
 import React from 'react';
 import { Phone, MapPin, Mail, Clock, Calendar, ArrowLeft, MessageSquare, User, CheckCircle } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { useNavigate } from 'react-router-dom';
 import ContactSection from '@/components/sections/ContactSection';
+import PDFExportButton from '@/components/ui/pdf-export-button';
 
 const ContactShowcase = () => {
   const navigate = useNavigate();
@@ -86,6 +86,11 @@ const ContactShowcase = () => {
               Back to Home
             </Button>
             <div className="flex items-center gap-4">
+              <PDFExportButton 
+                elementId="contact-content"
+                filename="dr-prathusha-contact"
+                title="Export Contact PDF"
+              />
               <a href="tel:+919876543210" className="text-sm text-teal-600 font-medium hover:text-teal-700">
                 📞 +91 98765 43210
               </a>
@@ -94,101 +99,103 @@ const ContactShowcase = () => {
         </div>
       </header>
 
-      {/* Hero Section */}
-      <section className="section-padding">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 mb-6">
-            Get in <span className="text-gradient">Touch</span>
-          </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed mb-8">
-            Ready to take the first step towards better health? We're here to help you on your wellness journey. 
-            Choose your preferred way to connect with Dr. Prathusha Nerella.
-          </p>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
-            <div className="text-center">
-              <div className="text-3xl font-bold text-teal-600 mb-2">24hr</div>
-              <div className="text-sm text-gray-600">Response Time</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-blue-600 mb-2">4</div>
-              <div className="text-sm text-gray-600">Contact Methods</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-purple-600 mb-2">7</div>
-              <div className="text-sm text-gray-600">Days a Week</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-pink-600 mb-2">100%</div>
-              <div className="text-sm text-gray-600">Confidential</div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Contact Methods */}
-      <section className="section-padding bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">Ways to Connect</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Choose the consultation method that works best for you
+      <div id="contact-content">
+        {/* Hero Section */}
+        <section className="section-padding">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 mb-6">
+              Get in <span className="text-gradient">Touch</span>
+            </h1>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed mb-8">
+              Ready to take the first step towards better health? We're here to help you on your wellness journey. 
+              Choose your preferred way to connect with Dr. Prathusha Nerella.
             </p>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
+              <div className="text-center">
+                <div className="text-3xl font-bold text-teal-600 mb-2">24hr</div>
+                <div className="text-sm text-gray-600">Response Time</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-blue-600 mb-2">4</div>
+                <div className="text-sm text-gray-600">Contact Methods</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-purple-600 mb-2">7</div>
+                <div className="text-sm text-gray-600">Days a Week</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-pink-600 mb-2">100%</div>
+                <div className="text-sm text-gray-600">Confidential</div>
+              </div>
+            </div>
           </div>
+        </section>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {contactMethods.map((method, index) => (
-              <Card key={index} className="professional-card hover-lift group text-center">
-                <CardContent className="p-8 space-y-6">
-                  <div className={`w-16 h-16 ${method.color} rounded-2xl flex items-center justify-center mx-auto group-hover:scale-110 transition-transform duration-300`}>
-                    <method.icon className="h-8 w-8" />
-                  </div>
-                  <div className="space-y-3">
-                    <h3 className="text-xl font-semibold text-gray-900">{method.title}</h3>
-                    <p className="text-gray-600 text-sm leading-relaxed">{method.description}</p>
-                  </div>
-                  <div className="space-y-2">
-                    <p className="font-semibold text-gray-900">{method.details}</p>
-                    <p className="text-sm text-gray-500">{method.availability}</p>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
+        {/* Contact Methods */}
+        <section className="section-padding bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">Ways to Connect</h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Choose the consultation method that works best for you
+              </p>
+            </div>
 
-      {/* FAQ Section */}
-      <section className="section-padding bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">Frequently Asked Questions</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Find answers to common questions about our services and consultation process
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-8">
-            {faqs.map((faq, index) => (
-              <Card key={index} className="professional-card hover-lift">
-                <CardContent className="p-8">
-                  <div className="flex items-start space-x-4">
-                    <div className="w-8 h-8 bg-teal-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                      <span className="text-teal-600 font-bold text-sm">?</span>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {contactMethods.map((method, index) => (
+                <Card key={index} className="professional-card hover-lift group text-center">
+                  <CardContent className="p-8 space-y-6">
+                    <div className={`w-16 h-16 ${method.color} rounded-2xl flex items-center justify-center mx-auto group-hover:scale-110 transition-transform duration-300`}>
+                      <method.icon className="h-8 w-8" />
                     </div>
                     <div className="space-y-3">
-                      <h3 className="text-lg font-semibold text-gray-900">{faq.question}</h3>
-                      <p className="text-gray-600 leading-relaxed text-sm">{faq.answer}</p>
+                      <h3 className="text-xl font-semibold text-gray-900">{method.title}</h3>
+                      <p className="text-gray-600 text-sm leading-relaxed">{method.description}</p>
                     </div>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
+                    <div className="space-y-2">
+                      <p className="font-semibold text-gray-900">{method.details}</p>
+                      <p className="text-sm text-gray-500">{method.availability}</p>
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Contact Form Section */}
-      <ContactSection />
+        {/* FAQ Section */}
+        <section className="section-padding bg-gray-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">Frequently Asked Questions</h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Find answers to common questions about our services and consultation process
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-8">
+              {faqs.map((faq, index) => (
+                <Card key={index} className="professional-card hover-lift">
+                  <CardContent className="p-8">
+                    <div className="flex items-start space-x-4">
+                      <div className="w-8 h-8 bg-teal-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                        <span className="text-teal-600 font-bold text-sm">?</span>
+                      </div>
+                      <div className="space-y-3">
+                        <h3 className="text-lg font-semibold text-gray-900">{faq.question}</h3>
+                        <p className="text-gray-600 leading-relaxed text-sm">{faq.answer}</p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Contact Form Section */}
+        <ContactSection />
+      </div>
     </div>
   );
 };
