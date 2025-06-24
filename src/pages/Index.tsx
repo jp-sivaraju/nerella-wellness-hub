@@ -1,7 +1,8 @@
 
 import React, { useState } from 'react';
-import { Calendar, Stethoscope, Phone, Mail, MapPin } from 'lucide-react';
+import { Calendar, Stethoscope, Phone, Mail, MapPin, ExternalLink } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
+import { Button } from "@/components/ui/button";
 import HeroSection from '@/components/sections/HeroSection';
 import AboutSection from '@/components/sections/AboutSection';
 import ServicesSection from '@/components/sections/ServicesSection';
@@ -73,6 +74,44 @@ const Index = () => {
         </div>
       </nav>
 
+      {/* Showcase Pages Banner */}
+      <div className="bg-gradient-to-r from-pink-600 to-purple-600 text-white py-4">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div className="text-center sm:text-left">
+              <p className="text-sm font-medium">🎉 Explore Our Detailed Feature Pages</p>
+              <p className="text-xs opacity-90">Get in-depth information about our services and approach</p>
+            </div>
+            <div className="flex flex-wrap gap-2">
+              <Button 
+                size="sm" 
+                variant="secondary"
+                onClick={() => navigate('/services')}
+                className="bg-white text-pink-600 hover:bg-gray-100"
+              >
+                Services <ExternalLink className="h-3 w-3 ml-1" />
+              </Button>
+              <Button 
+                size="sm" 
+                variant="secondary"
+                onClick={() => navigate('/about')}
+                className="bg-white text-pink-600 hover:bg-gray-100"
+              >
+                About Dr. Prathusha <ExternalLink className="h-3 w-3 ml-1" />
+              </Button>
+              <Button 
+                size="sm" 
+                variant="secondary"
+                onClick={() => navigate('/contact')}
+                className="bg-white text-pink-600 hover:bg-gray-100"
+              >
+                Contact Us <ExternalLink className="h-3 w-3 ml-1" />
+              </Button>
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* Sections */}
       <HeroSection scrollToSection={scrollToSection} />
       <AboutSection />
@@ -114,10 +153,10 @@ const Index = () => {
             <div>
               <h4 className="font-semibold mb-6 text-lg">Quick Links</h4>
               <ul className="space-y-3 text-gray-300">
-                <li><button onClick={() => scrollToSection('about')} className="hover:text-pink-400 transition-colors">About Dr. Nerella</button></li>
-                <li><button onClick={() => scrollToSection('services')} className="hover:text-pink-400 transition-colors">Our Services</button></li>
+                <li><button onClick={() => navigate('/about')} className="hover:text-pink-400 transition-colors">About Dr. Nerella</button></li>
+                <li><button onClick={() => navigate('/services')} className="hover:text-pink-400 transition-colors">Our Services</button></li>
                 <li><button onClick={() => scrollToSection('testimonials')} className="hover:text-pink-400 transition-colors">Patient Reviews</button></li>
-                <li><button onClick={() => scrollToSection('contact')} className="hover:text-pink-400 transition-colors">Schedule Consultation</button></li>
+                <li><button onClick={() => navigate('/contact')} className="hover:text-pink-400 transition-colors">Schedule Consultation</button></li>
               </ul>
             </div>
             
